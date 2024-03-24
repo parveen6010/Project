@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import { FaArrowLeft, FaArrowRight, FaMinus } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import "../Sass/Carousel.scss"; // Import your custom CSS file
-import Utensils from "../Resources/ModernUtensils.jpg"
-import Cone from "../Resources/cone.jpg"
-import Chair from "../Resources/chair.jpg"
-import Flower from "../Resources/flower.jpg"
-import Vase from "../Resources/vase.jpg"
+import R1 from "../Resources/R1.jpg"
+import R2 from "../Resources/R2.jpg"
+import R3 from "../Resources/R3.jpg"
+import R4 from "../Resources/R4.jpg"
+import R5 from "../Resources/R5.jpg"
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [Utensils,
-    Cone,
-    Flower,
-    Vase,
-    Chair];
+  const items = [R1,
+    R2,
+    R4,
+    R5,
+    R3];
   const totalItems = items.length;
 
   const nextItem = () => {
@@ -34,6 +34,7 @@ const Carousel = () => {
         <img src={items[(currentIndex + 2) % totalItems]} alt='Items' className='carousel-item4 ' />
         <img src={items[(currentIndex - 1 + totalItems) % totalItems]} alt='Items' className='carousel-item1 ' />
         <img src={items[(currentIndex + 1) % totalItems]} alt='Items' className='carousel-item2  ' />
+       
         <div className="main-item-container">
           <h1 className='main-item-title'>Modern kitchen utensils</h1>
           <img src={items[currentIndex]} alt='Items' className='main-item-image' />
